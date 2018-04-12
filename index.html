@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rafał Rudol - Personal Website</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=da8cb196ab6108a62dc9f435ae305db2&auto=format&fit=crop&w=1780&q=80');
+      background-size: cover;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+    }
+    
+    .box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 0;
+    }
+    
+    h2 {
+      font-weight: 300;
+    }
+
+    .social-icon {
+      color: white;
+      text-decoration: none;
+      font-size: 36px;
+      opacity: 0.5;
+      margin: 5px;
+    }
+    .social-icon:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Rafał Rudol</h1>
+    <h2>JavaScript Developer</h2>
+    
+    <a href="https://www.linkedin.com/in/rudol/" class="social-icon" title="LinkedIn" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/rrudol" class="social-icon" title="Github" target="_blank">
+      <i class="fab fa-github-square"></i>
+    </a>
+  
+    <a href="https://twitter.com/Rafal_Rudol" class="social-icon" title="Twitter" target="_blank">
+      <i class="fab fa-twitter-square"></i>
+    </a>
+
+    <a href="https://www.facebook.com/Rudol.Rafal" class="social-icon" title="Facebook" target="_blank">
+      <i class="fab fa-facebook-square"></i>
+    </a>
+    
+    <a href="https://www.instagram.com/rafalrudol/" class="social-icon" title="Instagram" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61614418-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-61614418-5');
+
+    [...document.getElementsByClassName('social-icon')].forEach(icon => icon.addEventListener('click', e => {
+      gtag('event', 'click', {
+        'event_category': 'social-icon',
+        'event_label': icon.title
+      });
+    }))
+  </script>
+</body>
+</html>
